@@ -39,7 +39,7 @@ RUN yum-config-manager --nogpgcheck --add-repo https://cbs.centos.org/repos/virt
     yum clean all
 
 ENV CRIO_PR ""
-ENV CRIO_COMMIT master
+ENV CRIO_COMMIT release-1.9
 RUN set -x \
        && export GOPATH="$(mktemp -d)" \
        && git clone https://github.com/kubernetes-incubator/cri-o.git "$GOPATH/src/github.com/kubernetes-incubator/cri-o" \
